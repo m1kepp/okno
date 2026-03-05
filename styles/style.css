@@ -115,7 +115,7 @@ ol {
   padding-block: 2px;
   padding-inline: 0;
   border: 0;
-  border-block: 1px solid #fff;
+  border-block: 1px solid currentColor;
   background-color: transparent;
   color: #fff;
   font-family: inherit;
@@ -127,8 +127,8 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 1px solid #fff;
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -143,7 +143,7 @@ ol {
   align-items: center;
   inline-size: 19px;
   block-size: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   background-color: transparent;
 }
 
@@ -151,20 +151,15 @@ ol {
   outline: none;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
   inline-size: 15px;
   block-size: 15px;
-  background-color: #fff;
+  background-color: currentColor;
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding-block: 6px;
   padding-inline: 0;
   background-color: transparent;
@@ -188,7 +183,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -206,7 +201,6 @@ ol {
   flex-direction: column;
   gap: 26px;
   inline-size: 399px;
-  block-size: 534px;
 }
 
 .title {
@@ -244,7 +238,6 @@ ol {
 }
 
 .content__card-link:hover {
-  background-color: #545050;
   text-decoration: underline;
 }
 
@@ -253,7 +246,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .content__card-link_current {
@@ -267,6 +260,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  min-inline-size: 0;
   padding: 2px;
 }
 
@@ -277,6 +271,7 @@ ol {
   line-height: 30px;
   text-transform: uppercase;
   margin-block-end: 6px;
+  max-inline-size: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -287,7 +282,7 @@ ol {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
